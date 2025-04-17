@@ -14,10 +14,10 @@ const AboutUs = () => {
       <section className="max-w-6xl mx-auto py-20 px-4 sm:px-6">
         <div className="bg-primaryBackground rounded-4xl text-white py-10 px-4 sm:px-6 lg:px-20">
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-3 md:col-span-2 flex flex-col space-y-2 text-center"></div>
-            <div className="col-span-3 md:col-span-1 flex flex-col space-y-2 py-2 px-4 bg-[#FFC7EA] rounded-lg">
+            <div className="col-span-3 md:col-span-2 flex flex-col space-y-2 text-center bg-red-500"></div>
+            <div className="col-span-3 md:col-span-1 flex flex-col space-y-2 p-4 bg-[#FFC7EA] rounded-lg">
               <div className="">
-                <h3 className="text-3xl font-bold text-primaryBackground py-2 px-1 rounded bg-secondaryBackground">
+                <h3 className="text-3xl font-bold text-primaryBackground py-2 w-fit px-1 rounded-xl bg-secondaryBackground">
                   Our Core Values
                 </h3>
               </div>
@@ -31,8 +31,19 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 mt-10 gap-4">
-            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 py-2 px-4 bg-secondaryBackground rounded-lg">
-              <h3 className="text-3xl font-bold text-secondaryBackground py-2 px-1 rounded bg-primaryBackground">
+            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-lg">
+              <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl  bg-primaryBackground">
+                Our Vision
+              </h3>
+              <p className="text-white">
+                To create a just, inclusive, and empowered society where women,
+                children, and marginalized groups thrive socially, economically,
+                and intellectually, leading to sustainable development and equal
+                opportunities for all.
+              </p>
+            </div>
+            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-lg">
+              <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl bg-primaryBackground">
                 Our Mission
               </h3>
               <p className="text-white">
@@ -45,39 +56,26 @@ const AboutUs = () => {
                 potential.
               </p>
             </div>
-            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 py-2 px-4 bg-secondaryBackground rounded-lg">
-              <h3 className="text-3xl font-bold text-secondaryBackground py-2 px-1 rounded bg-primaryBackground">
-                Our Mission
-              </h3>
-              <p className="text-white">
-                To create a just, inclusive, and empowered society where women,
-                children, and marginalized groups thrive socially, economically,
-                and intellectually, leading to sustainable development and equal
-                opportunities for all.
-              </p>
-            </div>
           </div>
           <div className="bg-[#FFC7EA] text-secondaryBackground mt-10 rounded-xl px-10 py-10">
-            <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <div className="max-w-6xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
               <div className="flex flex-col space-y-2 text-center">
-                <p className="text-xl md:text-5xl lg:text-8xl font-extrabold">
+                <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                   1000+
                 </p>
                 <p className="text-xl">women & children beneficiaries </p>
               </div>
               <div className="flex flex-col space-y-2 text-center">
-                <p className="text-xl md:text-5xl lg:text-8xl font-extrabold">
+                <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                   10+
                 </p>
-                <p className="text-xl">women & children beneficiaries </p>
+                <p className="text-xl">Community Programs</p>
               </div>
               <div className="flex flex-col space-y-2 text-center">
-                <p className="text-xl md:text-5xl lg:text-8xl font-extrabold">
+                <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                   3+
                 </p>
-                <p className="text-sm md:text-xl">
-                  women & children beneficiaries{' '}
-                </p>
+                <p className="text-xl">Years of advocacy work </p>
               </div>
             </div>
           </div>

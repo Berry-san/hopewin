@@ -64,7 +64,7 @@ const Footer = () => {
             <h4 className="font-bold text-base">Home</h4>
             <ul className="mt-4 spce-y-2">
               <li>+234 08037169732</li>
-              <li>info@hopeforpeacewomen.org</li>
+              <li>info</li>
               <li>No. 10 Bashiru Owei Street, Ikeja, Lagos, Nigeria</li>
             </ul>
           </div>

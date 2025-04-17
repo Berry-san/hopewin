@@ -9,7 +9,6 @@ const LandingPage = () => {
   return (
     <>
       <section id="hero" className="relative bg-white w-full ">
-        <Header />
         <div className="flex items-center justify-center flex-col my-20 text-center space-y-6">
           <h2 className="text-3xl md:text-7xl font-extrabold max-w-4xl">
             Empowering <span className="text-primary">Women</span>, Uplifting{' '}
@@ -21,6 +20,18 @@ const LandingPage = () => {
             and advocacy. Join us in creating a future where every woman and
             child can thrive.
           </p>
+          <div className="flex space-x-4">
+            <Link href="/login">
+              <Button size={'xl'} className="">
+                Donate to our cause
+              </Button>
+            </Link>
+            <Link href="/onboarding">
+              <Button size={'xl'} variant="outline">
+                Get Involved
+              </Button>
+            </Link>
+          </div>
         </div>
         <div className="bg-gradient-to-b from-[#FFE5F7] to-[#E4FBCC] py-10 px-10">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -80,7 +91,7 @@ const LandingPage = () => {
         </h3>
         <div className="grid grid-cols-3 gap-6">
           <div className="flex flex-col justify-center space-y-4 col-span-3 lg:col-span-1">
-            <div className="p-2 bg-primaryBackground text-primary rounded-md">
+            <div className="w-fit p-2 bg-primaryBackground text-primary rounded-md">
               <Donate className="w-12 h-12" />
             </div>
             <h4 className="text-3xl font-bold">Volunteer with us</h4>
@@ -218,7 +229,6 @@ const LandingPage = () => {
           </Link>
         </div>
       </section>
-      <Footer />
     </>
   )
 }

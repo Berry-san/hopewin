@@ -44,16 +44,15 @@ const Header = () => {
       <header className="bg-transparent w-full">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
           {/* Logo */}
-          {/* <Link className="flex-shrink-0" href={'/'}>
+          <Link className="flex-shrink-0" href={'/'}>
             <Image
-              src={ethicaLogo}
-              width={100}
-              height={100}
+              src={'/images/logo.png'}
+              width={50}
+              height={50}
               alt="Ethica"
               style={{ width: 'auto' }}
             />
-          </Link> */}
-          <p>Logo</p>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-6">
@@ -71,7 +70,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop Buttons */}
-          <div className="hidden lg:flex space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link href="/login">
               <Button variant="outline" className="">
                 Become a Partner
@@ -86,7 +85,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-1"
+              className="text-black p-1"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -96,16 +95,14 @@ const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden px-4 pb-6 space-y-4 bg-white min-h-screen">
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-2 justify-center">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-2 rounded-md transition ${
-                    pathname === item.path
-                      ? 'bg-secondary text-primary'
-                      : 'text-text-primary'
+                    pathname === item.path && 'text-primary'
                   }`}
                 >
                   {item.label}
@@ -145,9 +142,7 @@ const Header = () => {
                   key={item.label}
                   href={item.path}
                   className={`px-3 py-1 rounded-md font-medium transition ${
-                    pathname === item.path
-                      ? 'bg-secondary text-primary'
-                      : 'text-gray-700'
+                    pathname === item.path && 'text-primary'
                   }`}
                 >
                   {item.label}
@@ -156,15 +151,12 @@ const Header = () => {
             </nav>
             <div className="hidden md:flex space-x-3">
               <Link href="/login">
-                <Button
-                  variant="outline"
-                  className="bg-[#F2F2F2] text-[#009148]"
-                >
-                  Login
+                <Button variant="outline" className=" text-primary">
+                  Become a partner
                 </Button>
               </Link>
               <Link href="/onboarding">
-                <Button className="bg-primary text-white">Get Started</Button>
+                <Button className="bg-primary text-white">Contact Us</Button>
               </Link>
             </div>
           </div>
