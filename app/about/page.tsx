@@ -1,21 +1,46 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import React from 'react'
+import Image from 'next/image'
 
 const AboutUs = () => {
   return (
-    <>
-      <section className="max-w-7xl mx-auto mt-20">
-        <div className="bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-center grid grid-cols-5 h-40 gap-4">
-          <div className="col-span-5 md:col-span-3">hello</div>
-          <div className="col-span-5 md:col-span-2">hey</div>
+    <div className="pt-10">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
+          <div className="col-span-3 lg:col-span-2 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-extrabold">
+              About Us{' '}
+            </h2>
+            <p className="text-2xl mt-4">
+              Hope for Peace Women Initiative has been a beacon of hope in
+              Nigeria for over two years. We believe that by uplifting women and
+              safeguarding children&atops;s rights, we contribute to a more
+              equitable and inclusive society.
+            </p>
+          </div>
+          <div className="col-span-3 lg:col-span-1">
+            <Image
+              src={'/images/pie-chart.png'}
+              width={500}
+              height={500}
+              alt={'Programs Image'}
+            />
+          </div>
         </div>
       </section>
-      <section className="max-w-6xl mx-auto py-20 px-4 sm:px-6">
-        <div className="bg-primaryBackground rounded-4xl text-white py-10 px-4 sm:px-6 lg:px-20">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="bg-primaryBackground rounded-[2rem] lg:rounded-[3.5rem] text-white p-6 md:p-12 lg:p-20 mb-12">
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-3 md:col-span-2 flex flex-col space-y-2 text-center bg-red-500"></div>
-            <div className="col-span-3 md:col-span-1 flex flex-col space-y-2 p-4 bg-[#FFC7EA] rounded-lg">
+            <div className="col-span-3 md:col-span-2 flex flex-col space-y-2 text-center">
+              <Image
+                src={'/images/about-image.png'}
+                width={500}
+                height={500}
+                className="w-full bg-contain h-full"
+                alt={'Programs Image'}
+              />
+            </div>
+            <div className="col-span-3 md:col-span-1 flex flex-col space-y-2 p-4 bg-[#FFC7EA] rounded-[1.5rem]">
               <div className="">
                 <h3 className="text-3xl font-bold text-primaryBackground py-2 w-fit px-1 rounded-xl bg-secondaryBackground">
                   Our Core Values
@@ -23,16 +48,16 @@ const AboutUs = () => {
               </div>
               <ul className="list-disc list-inside text-left text-secondaryBackground">
                 <li>Integrity</li>
-                <li>Integrity</li>
-                <li>Integrity</li>
-                <li>Integrity</li>
-                <li>Integrity</li>
+                <li>Empowerment</li>
+                <li>Inclusion</li>
+                <li>Collaboration</li>
+                <li>Sustainability</li>
               </ul>
             </div>
           </div>
           <div className="grid grid-cols-2 mt-10 gap-4">
-            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-lg">
-              <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl  bg-primaryBackground">
+            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-[1.5rem]">
+              <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl bg-primaryBackground">
                 Our Vision
               </h3>
               <p className="text-white">
@@ -42,7 +67,7 @@ const AboutUs = () => {
                 opportunities for all.
               </p>
             </div>
-            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-lg">
+            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-[1.5rem]">
               <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl bg-primaryBackground">
                 Our Mission
               </h3>
@@ -57,7 +82,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#FFC7EA] text-secondaryBackground mt-10 rounded-xl px-10 py-10">
+          <div className="bg-[#FFC7EA] text-secondaryBackground mt-10 rounded-[2rem] px-10 py-10">
             <div className="max-w-6xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
               <div className="flex flex-col space-y-2 text-center">
                 <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
@@ -93,7 +118,7 @@ const AboutUs = () => {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

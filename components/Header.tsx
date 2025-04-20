@@ -35,6 +35,18 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
   const handleLogin = () => {
     router.push('/login')
   }
@@ -42,13 +54,13 @@ const Header = () => {
   return (
     <>
       <header className="bg-transparent w-full">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-10 py-4">
           {/* Logo */}
           <Link className="flex-shrink-0" href={'/'}>
             <Image
               src={'/images/logo.png'}
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               alt="Ethica"
               style={{ width: 'auto' }}
             />
@@ -71,18 +83,18 @@ const Header = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/login">
+            <Link href="/get-involved">
               <Button variant="outline" className="">
                 Become a Partner
               </Button>
             </Link>
-            <Link href="/onboarding">
+            <Link href="/contact-us">
               <Button className=" text-white">Contact Us</Button>
             </Link>
           </div>
 
           {/* Hamburger Icon */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-black p-1"
@@ -94,7 +106,29 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden px-4 pb-6 space-y-4 bg-white min-h-screen">
+          <div className="fixed inset-0 z-40 bg-white flex flex-col px-4 md:px-10 py-4 space-y-8">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <Link className="flex-shrink-0" href={'/'}>
+                <Image
+                  src={'/images/logo.png'}
+                  width={40}
+                  height={40}
+                  alt="Ethica"
+                  style={{ width: 'auto' }}
+                />
+              </Link>
+
+              {/* Hamburger Icon */}
+              <div className="lg:hidden">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-black p-1"
+                >
+                  {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
+            </div>
             <nav className="flex flex-col space-y-2 justify-center">
               {navItems.map((item) => (
                 <Link
@@ -125,23 +159,23 @@ const Header = () => {
 
       {/* Sticky Header After Scrolling */}
       {showStickyHeader && (
-        <div className="fixed top-0 left-0 w-full mt-2 hidden md:block z-50 transition-all duration-300">
-          <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 rounded-full bg-white">
+        <div className="fixed top-0 left-0 w-full mt-2 hidden lg:block z-40 transition-all duration-300 px-4 md:px-10">
+          <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3 rounded-full bg-white">
             <Link href={'/'}>
-              {/* <Image
-                src={ethicaLogo}
-                width={80}
-                height={80}
+              <Image
+                src={'/images/logo.png'}
+                width={40}
+                height={40}
                 alt="Ethica"
                 style={{ width: 'auto' }}
-              /> */}
+              />
             </Link>
             <nav className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.path}
-                  className={`px-3 py-1 rounded-md font-medium transition ${
+                  className={`px-3 py-1 rounded-md font-medium text-base transition ${
                     pathname === item.path && 'text-primary'
                   }`}
                 >

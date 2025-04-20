@@ -14,61 +14,46 @@ const Donate = () => {
           impact.
         </p>
         <h2 className="text-primary text-xl font-bold">
-          Why Volunteer with Us?
+          How Your Donation Helps{' '}
         </h2>
         <div className="text-base font-medium">
-          <p>
-            Volunteering with Hope for Peace Women Initiative allows you to:
-          </p>
+          <p>Your support enables us to: </p>
           <ul className="list-disc list-inside">
             <li>
-              <span className="font-bold">Make a Positive Impact</span> on
-              underserved communities
+              <span className="font-bold">Provide Educational Resources:</span>{' '}
+              Supply school bags, books, and stationery to children in need
+              through our Back to School Program.
             </li>
             <li>
-              <span className="font-bold">Gain Valuable Experience</span> in
-              community work, education, healthcare, and advocacy
+              <span className="font-bold">Improve Access to Healthcare:</span>{' '}
+              Fund medical checkups, provide essential medications, and promote
+              health awareness in underserved communities through our Health
+              Outreach
             </li>
             <li>
-              <span className="font-bold">
-                Connect with Like-Minded Individuals
-              </span>
-              who share a passion for making a difference
+              <span className="font-bold">Empower Women and Youth:</span>{' '}
+              Support training programs that equip women and young people with
+              skills for financial independence and personal growth.{' '}
             </li>
           </ul>
         </div>
-        <h2 className="text-primary text-xl font-bold">
-          Volunteer Opportunities
-        </h2>
+        <h2 className="text-primary text-xl font-bold">Ways to Donate</h2>
         <ol className="list-decimal list-outside">
           <li>
-            <span className="font-bold">Community Outreach:</span>
-            Assist in our Health Outreach and Back to School programs, providing
-            essential supplies, medical checkups, and support to those in need.
+            <span className="font-bold">One-Time Donation:</span> Make a
+            one-time gift to support our programs and initiatives.
           </li>
           <li>
-            <span className="font-bold">Educational Support:</span>
-            Help organize and conduct workshops, mentoring sessions, and
-            training programs for women and youth.
+            <span className="font-bold">Monthly Giving:</span> Join our
+            community of monthly donors and provide sustained support that
+            allows us to plan long-term projects.
           </li>
           <li>
-            <span className="font-bold">Event Planning and Fundraising:</span>
-            Contribute to planning events, campaigns, and fundraisers that help
-            us reach our goals.
-          </li>
-          <li>
-            <span className="font-bold">Environmental Initiatives:</span>
-            Join our efforts in environmental preservation by participating in
-            clean-up drives, tree planting, and awareness campaigns.
+            <span className="font-bold">Sponsor a Program:</span> Directly fund
+            one of our specific programs, such as our Back to School Program or
+            Health Outreach, to see your impact in action.
           </li>
         </ol>
-        <h2 className="text-primary text-xl font-bold">How to Apply</h2>
-        <p className="text-base font-medium">
-          If you’re ready to make a difference, fill out our Volunteer
-          Application Form [link to form]. Once submitted, our team will get in
-          touch with more details about upcoming volunteer opportunities and how
-          you can get involved.
-        </p>
         <h2 className="text-primary text-xl font-bold">How to Donate</h2>
         <p className="text-base font-medium">
           You can donate securely through our online portal [link to donation
@@ -82,6 +67,24 @@ const Donate = () => {
           </a>
           .
         </p>
+        <h2 className="text-primary text-xl font-bold">Your Impact </h2>
+        <div className="text-base font-medium">
+          <p>When you donate, you will receive: </p>
+          <ul className="list-disc list-inside">
+            <li>
+              <span className="font-bold">Regular Updates</span> on how your
+              funds are used to make a difference.
+            </li>
+            <li>
+              <span className="font-bold">Success Stories</span> showcasing the
+              lives changed by your generosity.
+            </li>
+            <li>
+              <span className="font-bold">Recognition</span> as a valued
+              supporter of Hope for Peace Women Initiative.
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   )

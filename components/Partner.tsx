@@ -91,16 +91,14 @@ const Partner = () => {
         <h2 className="text-primary text-xl font-bold">
           Contact Us to Partner
         </h2>
-        <p className="text-base font-medium">
-          To explore partnership opportunities, please contact us at or call .
-          Together, we can make a profound difference in the lives of those who
-          need it most.
+        <p className="text-base font-medium flex-wrap">
+          To explore partnership opportunities, please contact us at{' '}
           <a
             href="mailto:volunteer@hopeforpeacewomen.org"
-            className="text-primary"
+            className="text-primary break-words"
           >
             partnerships@hopeforpeacewomen.org{' '}
-          </a>
+          </a>{' '}
           or call <span className="text-primary">08037169732</span>. Together,
           we can make a profound difference in the lives of those who need it
           most.

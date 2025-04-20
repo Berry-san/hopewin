@@ -9,7 +9,7 @@ const Volunteer = () => {
           At Hope for Peace Women Initiative, volunteers are the heartbeat of
           our work. By dedicating your time and skills, you can make a tangible
           difference in the lives of women, children, and families in our
-          communities. Whether you’re interested in teaching, providing
+          communities. Whether you&atops;re interested in teaching, providing
           healthcare support, organizing events, or helping behind the scenes,
           we welcome you to join us in creating a brighter future for all.
         </p>
@@ -32,7 +32,7 @@ const Volunteer = () => {
             <li>
               <span className="font-bold">
                 Connect with Like-Minded Individuals
-              </span>
+              </span>{' '}
               who share a passion for making a difference
             </li>
           </ul>
@@ -64,7 +64,7 @@ const Volunteer = () => {
         </ol>
         <h2 className="text-primary text-xl font-bold">How to Apply</h2>
         <p className="text-base font-medium">
-          If you’re ready to make a difference, fill out our Volunteer
+          If you&atops;re ready to make a difference, fill out our Volunteer
           Application Form [link to form]. Once submitted, our team will get in
           touch with more details about upcoming volunteer opportunities and how
           you can get involved.

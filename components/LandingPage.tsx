@@ -4,12 +4,34 @@ import { Button } from './ui/button'
 import { Donate } from 'iconoir-react'
 import Link from 'next/link'
 import Footer from './Footer'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+
+const eventItems = [
+  {
+    title: 'Annual Women&atops;s Empowerment Conference',
+    background: '/images/conference.png',
+  },
+  {
+    title: 'Child Protection Awareness Workshop',
+    background: '/images/workshop.png',
+  },
+  {
+    title: 'Back to School Program',
+    background: '/images/conference.png',
+  },
+]
 
 const LandingPage = () => {
   return (
     <>
       <section id="hero" className="relative bg-white w-full ">
-        <div className="flex items-center justify-center flex-col my-20 text-center space-y-6">
+        <div className="flex items-center justify-center flex-col my-20 text-center space-y-6 px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-7xl font-extrabold max-w-4xl">
             Empowering <span className="text-primary">Women</span>, Uplifting{' '}
             <span className="text-secondary">Communities</span>
@@ -20,7 +42,7 @@ const LandingPage = () => {
             and advocacy. Join us in creating a future where every woman and
             child can thrive.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
             <Link href="/login">
               <Button size={'xl'} className="">
                 Donate to our cause
@@ -34,24 +56,24 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="bg-gradient-to-b from-[#FFE5F7] to-[#E4FBCC] py-10 px-10">
-          <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <div className="max-w-6xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
             <div className="flex flex-col space-y-2 text-center">
-              <p className="text-lg md:text-2xl lg:text-8xl font-extrabold">
+              <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                 1000+
               </p>
-              <p className="text-xl">women & children beneficiaries </p>
+              <p className="text-xl">Women & children beneficiaries </p>
             </div>
             <div className="flex flex-col space-y-2 text-center">
-              <p className="text-lg md:text-2xl lg:text-8xl font-extrabold">
+              <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                 10+
               </p>
-              <p className="text-xl">women & children beneficiaries </p>
+              <p className="text-xl">Community Programs</p>
             </div>
             <div className="flex flex-col space-y-2 text-center">
-              <p className="text-lg md:text-2xl lg:text-8xl font-extrabold">
+              <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                 3+
               </p>
-              <p className="text-xl">women & children beneficiaries </p>
+              <p className="text-xl">Years of advocacy work </p>
             </div>
           </div>
         </div>
@@ -60,7 +82,7 @@ const LandingPage = () => {
         <div className="grid grid-cols-2">
           <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center">
             <Image
-              src={'/images/about_image.png'}
+              src={'/images/about-section-image.png'}
               width={450}
               height={450}
               alt={'About Image'}
@@ -74,7 +96,7 @@ const LandingPage = () => {
               Founded with a vision to empower women and protect children's
               rights, Hope for Peace Women Initiative has been a beacon of hope
               in Nigeria for over two years. We believe that by uplifting women
-              and safeguarding children’s rights, we contribute to a more
+              and safeguarding children&atops;s rights, we contribute to a more
               equitable and inclusive society
             </p>
             <div className="">
@@ -85,11 +107,69 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      <section className="py-20 px-10 space-y-10 bg-primaryBackground min-h-screen flex flex-col items-center justify-center">
+        <h3 className="text-5xl font-extrabold">
+          Our <span className="text-primary">Programs</span>
+        </h3>
+        <div className="grid grid-cols-4 grid-rows-9 gap-4 md:grid-cols-6 md:grid-rows-6 w-full max-w-6xl mx-auto h-full">
+          {/* Element 1 */}
+          <div className="row-span-4 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-1.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+            <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
+              Women <span className="text-[#23DB76]">Empowerment</span>
+            </p>
+          </div>
+
+          {/* Element 2 */}
+          <div className="row-span-2 col-span-2 md:row-span-3 md:col-span-2 bg-[url(/images/grid-2.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+            <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
+              Youth <span className="text-primary">Mentorship</span>
+            </p>
+          </div>
+
+          {/* Element 3 */}
+          <div className="row-span-3 col-span-2 md:row-span-2 md:col-span-2 bg-[url(/images/grid-2.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+            <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold mt-10">
+              Environmental <span className="text-[#23DB76]">Protection</span>
+            </p>
+          </div>
+
+          {/* Element 4 */}
+          <div className="row-span-2 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-4.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+            <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold mt-10">
+              Child{' '}
+              <span className="text-primary">
+                protection <span className="text-white">&</span> Advocacy
+              </span>
+            </p>
+          </div>
+
+          {/* Element 5 */}
+          <div className="row-span-4 col-span-2 md:row-span-3 md:col-span-2 bg-[url(/images/grid-5.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+            <p className="text-white text-sm md:text-2xl lg:text-3xl font-bold max-w-[15rem] text-center">
+              <span className="text-[#23DB76]">Back to School</span> Progam
+            </p>
+          </div>
+
+          {/* Element 6 */}
+          <div className="row-span-3 col-span-2 md:row-span-2 md:col-span-2 bg-[url(/images/grid-4.png)] bg-cover bg-no-repeat bg-center px-4 py-6 rounded-3xl shadow flex items-end justify-center">
+            <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
+              <span className="text-primary">Research</span> & Advocacy
+            </p>
+          </div>
+        </div>
+        <Button
+          variant={'outline'}
+          size={'xl'}
+          className="bg-transparent lg:w-1/3"
+        >
+          See More
+        </Button>
+      </section>
       <section className="max-w-6xl mx-auto py-20 px-10 space-y-10">
         <h3 className="text-center text-5xl font-extrabold">
           <span className="text-primary">Get</span> Involved
         </h3>
-        <div className="grid grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-3 gap-6">
           <div className="flex flex-col justify-center space-y-4 col-span-3 lg:col-span-1">
             <div className="w-fit p-2 bg-primaryBackground text-primary rounded-md">
               <Donate className="w-12 h-12" />
@@ -106,35 +186,73 @@ const LandingPage = () => {
             </Button>
           </div>
           <div className="flex flex-col justify-center space-y-4 col-span-3 lg:col-span-1">
-            <div className="p-2 bg-primaryBackground text-primary rounded-md">
+            <div className="w-fit p-2 bg-primaryBackground text-primary rounded-md">
               <Donate className="w-12 h-12" />
             </div>
-            <h4 className="text-3xl font-bold">Volunteer with us</h4>
+            <h4 className="text-3xl font-bold">Become a partner</h4>
             <p className="">
-              Make a difference by volunteering in one of our programs. Whether
-              you&atops;re interested in mentoring youth, helping with
-              women&atops;s empowerment initiatives, or any project, we have a
-              place for you.
+              We welcome partnerships with organizations, businesses, and
+              individuals who share our vision. By working together, we can
+              extend our impact and reach more communities.
             </p>
             <Button variant={'outline'} size={'xl'}>
               See More
             </Button>
           </div>
           <div className="flex flex-col justify-center space-y-4 col-span-3 lg:col-span-1">
-            <div className="p-2 bg-primaryBackground text-primary rounded-md">
+            <div className=" w-fit p-2 bg-primaryBackground text-primary rounded-md">
               <Donate className="w-12 h-12" />
             </div>
-            <h4 className="text-3xl font-bold">Volunteer with us</h4>
+            <h4 className="text-3xl font-bold">Donate</h4>
             <p className="">
-              Make a difference by volunteering in one of our programs. Whether
-              you&atops;re interested in mentoring youth, helping with
-              women&atops;s empowerment initiatives, or any project, we have a
-              place for you.
+              Your donations go directly to funding our programs, from providing
+              education to vulnerable children to supporting women in their
+              journey toward independence. Every contribution makes a
+              difference.
             </p>
             <Button variant={'outline'} size={'xl'}>
               See More
             </Button>
           </div>
+        </div> */}
+        <div className="grid grid-cols-3 gap-6">
+          {[
+            {
+              title: 'Volunteer with us',
+              description:
+                "Make a difference by volunteering in one of our programs. Whether you're interested in mentoring youth, helping with women's empowerment initiatives, or any project, we have a place for you.",
+            },
+            {
+              title: 'Become a partner',
+              description:
+                'We welcome partnerships with organizations, businesses, and individuals who share our vision. By working together, we can extend our impact and reach more communities.',
+            },
+            {
+              title: 'Donate',
+              description:
+                'Your donations go directly to funding our programs, from providing education to vulnerable children to supporting women in their journey toward independence. Every contribution makes a difference.',
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col col-span-3 lg:col-span-1">
+              {/* Icon always at top */}
+              <div className="w-fit p-2 bg-primaryBackground text-primary rounded-md mb-4">
+                <Donate className="w-12 h-12" />
+              </div>
+
+              {/* Growable content section */}
+              <div className="flex-grow space-y-4">
+                <h4 className="text-3xl font-bold">{item.title}</h4>
+                <p className="text-base">{item.description}</p>
+              </div>
+
+              {/* Button always at bottom */}
+              <div className="pt-4 mt-6">
+                <Button variant={'outline'} size={'xl'}>
+                  See More
+                </Button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className="bg-primaryBackground py-20 px-10">
@@ -142,25 +260,74 @@ const LandingPage = () => {
           <h3 className="text-center text-5xl font-extrabold">
             News & <span className="text-primary">Updates</span>
           </h3>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="flex items-center md:justify-between py-10 md:border-b-2 border-dashed border-primary">
+            <h4 className="text-3xl text-center text-secondaryBackground md:text-left w-full font-bold max-w-[15rem] mx-auto md:mx-0">
+              Our Upcoming <span className="text-primary">Events</span>
+            </h4>
+            <div className="max-w-md hidden md:block">
+              <p className="mb-4">
+                Stay updated on our latest events, community outreach, and
+                stories of impact. We share updates on ongoing projects, and
+                opinion pieces on trending social issues affecting women and
+                children.
+              </p>
+              <Button>See More</Button>
+            </div>
+          </div>
+          {/* <div className="grid grid-cols-3 gap-6">
             <div className="bg-[url('/images/newsBackground.png')] bg-cover bg-no-repeat bg-center w-full p-2 rounded-md col-span-3 lg:col-span-1">
-              <div className="w-full h-40 bg-amber-300 rounded-lg"></div>
+              <div className="w-full h-56 bg-amber-300 rounded-lg"></div>
               <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4">
                 Annual Women&apos;s Empowerment Conference
               </p>
             </div>
             <div className="bg-[url('/images/newsBackground.png')] bg-cover bg-no-repeat bg-center w-full p-2 rounded-md col-span-3 lg:col-span-1">
-              <div className="w-full h-40 bg-amber-300 rounded-lg"></div>
+              <div className="w-full h-56 bg-amber-300 rounded-lg"></div>
               <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4">
                 Annual Women&apos;s Empowerment Conference
               </p>
             </div>
             <div className="bg-[url('/images/newsBackground.png')] bg-cover bg-no-repeat bg-center w-full p-2 rounded-md col-span-3 lg:col-span-1">
-              <div className="w-full h-40 bg-amber-300 rounded-lg"></div>
+              <div className="w-full h-56 bg-amber-300 rounded-lg"></div>
               <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4">
                 Annual Women&apos;s Empowerment Conference
               </p>
             </div>
+          </div> */}
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-2">
+              {eventItems.map((event, index) => (
+                <CarouselItem
+                  key={index}
+                  className="pl-2 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="bg-cover bg-[url('/images/newsBackground.png')] bg-no-repeat bg-center w-full p-2 rounded-md">
+                    <Image
+                      src={event.background}
+                      width={300}
+                      height={300}
+                      alt={'Conference Image'}
+                      className="w-full aspect-[4/3] bg-amber-300 rounded-lg"
+                    />
+                    <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4 min-h-[7.5rem] md:min-h-[5.5rem]">
+                      {event.title}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-end gap-4 mt-6">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+          </Carousel>
+          <div className="max-w-md block md:hidden items-center text-center">
+            <p className="mb-4">
+              Stay updated on our latest events, community outreach, and stories
+              of impact. We share updates on ongoing projects, and opinion
+              pieces on trending social issues affecting women and children.
+            </p>
+            <Button>See More</Button>
           </div>
         </div>
       </section>
@@ -177,14 +344,6 @@ const LandingPage = () => {
 
           <div className="space-y-20">
             <div className="grid grid-cols-2 place-content-center place-items-center">
-              <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center ">
-                <Image
-                  src={'/images/about_image.png'}
-                  width={450}
-                  height={450}
-                  alt={'About Image'}
-                />
-              </div>
               <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10">
                 <h3 className="text-5xl font-extrabold">
                   Meet <span className="text-secondary">Sarah</span>
@@ -193,25 +352,35 @@ const LandingPage = () => {
                   A young mother who transformed her life through our vocational
                   training program, now running her own business.
                 </p>
+              </div>
+              <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center ">
+                <Image
+                  src={'/images/about_image.png'}
+                  width={450}
+                  height={450}
+                  alt={'About Image'}
+                />
               </div>
             </div>
             <div className="grid grid-cols-2 place-content-center place-items-center">
-              <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center ">
+              <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10 order-1 md:order-2">
+                <h3 className="text-5xl font-extrabold">
+                  Hope Restored for{' '}
+                  <span className="text-secondary">Ameenah</span>
+                </h3>
+                <p className="text-xl font-medium">
+                  A child once at risk of dropping out of school is now
+                  excelling in his studies thanks to our child protection
+                  initiative.
+                </p>
+              </div>
+              <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center order-2 md:order-1">
                 <Image
                   src={'/images/about_image.png'}
                   width={450}
                   height={450}
                   alt={'About Image'}
                 />
-              </div>
-              <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10">
-                <h3 className="text-5xl font-extrabold">
-                  Meet <span className="text-secondary">Sarah</span>
-                </h3>
-                <p className="text-xl font-medium">
-                  A young mother who transformed her life through our vocational
-                  training program, now running her own business.
-                </p>
               </div>
             </div>
           </div>

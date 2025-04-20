@@ -23,7 +23,7 @@ const programs = [
     id: 4,
     title: 'Youth Mentorship',
     description:
-      'We provide guidance and mentorship to young people, helping them develop leadership skills and navigate life’s challenges. We connect youth with opportunities for education, employment, and community involvement.',
+      'We provide guidance and mentorship to young people, helping them develop leadership skills and navigate life&atops;s challenges. We connect youth with opportunities for education, employment, and community involvement.',
   },
   {
     id: 5,
@@ -41,13 +41,13 @@ const programs = [
     id: 7,
     title: 'Research and Advocacy',
     description:
-      'Our NGO conducts research on social issues affecting women and children, gathering data to inform policies and advocacy campaigns. We also campaign for awareness on critical issues such as women’s rights, gender equality, and mental health.',
+      'Our NGO conducts research on social issues affecting women and children, gathering data to inform policies and advocacy campaigns. We also campaign for awareness on critical issues such as women&atops;s rights, gender equality, and mental health.',
   },
 ]
 
 const Programs = () => {
   return (
-    <div className="max-w-6xl mx-auto py-10 md:py-20 px-8">
+    <div className="max-w-6xl mx-auto py-10 px-8">
       <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
         <div className="col-span-3 lg:col-span-2 text-white">
           <h2 className="text-3xl md:text-4xl lg:text-6xl font-extrabold">
@@ -67,7 +67,7 @@ const Programs = () => {
           />
         </div>
       </div>
-      <div className="max-w-5xl mx-auto my-10">
+      <div className="max-w-6xl mx-auto my-10">
         <h3 className="font-bold text-3xl md:text-5xl text-center mb-10">
           Our programs include the following
         </h3>
