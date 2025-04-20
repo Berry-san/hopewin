@@ -184,7 +184,7 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
-      className={cn('size-8', className)}
+      className={cn('size-8 bg-transparent', className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
@@ -209,7 +209,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        'size-8 rounded-lg',
+        'size-8 rounded-lg bg-transparent',
 
         className
       )}

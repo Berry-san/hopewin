@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Header from './Header'
 import { Button } from './ui/button'
 import { Donate } from 'iconoir-react'
+import GiveMoney from './svgs/GiveMoney'
+import Handshake from './svgs/Handshake'
 import Link from 'next/link'
 import Footer from './Footer'
 import {
@@ -134,7 +136,7 @@ const LandingPage = () => {
           </div>
 
           {/* Element 4 */}
-          <div className="row-span-2 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-4.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-2 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-6.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold mt-10">
               Child{' '}
               <span className="text-primary">
@@ -219,16 +221,19 @@ const LandingPage = () => {
           {[
             {
               title: 'Volunteer with us',
+              icon: <Donate className="w-12 h-12" />,
               description:
                 "Make a difference by volunteering in one of our programs. Whether you're interested in mentoring youth, helping with women's empowerment initiatives, or any project, we have a place for you.",
             },
             {
               title: 'Become a partner',
+              icon: <Handshake className="w-12 h-12" />,
               description:
                 'We welcome partnerships with organizations, businesses, and individuals who share our vision. By working together, we can extend our impact and reach more communities.',
             },
             {
               title: 'Donate',
+              icon: <GiveMoney className="w-12 h-12" />,
               description:
                 'Your donations go directly to funding our programs, from providing education to vulnerable children to supporting women in their journey toward independence. Every contribution makes a difference.',
             },
@@ -236,7 +241,7 @@ const LandingPage = () => {
             <div key={i} className="flex flex-col col-span-3 lg:col-span-1">
               {/* Icon always at top */}
               <div className="w-fit p-2 bg-primaryBackground text-primary rounded-md mb-4">
-                <Donate className="w-12 h-12" />
+                {item.icon}
               </div>
 
               {/* Growable content section */}

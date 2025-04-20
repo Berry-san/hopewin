@@ -144,12 +144,12 @@ const Header = () => {
               ))}
             </nav>
             <div className="flex flex-col space-y-3">
-              <Link href="/login" onClick={() => setIsOpen(false)}>
+              <Link href="/get-involved" onClick={() => setIsOpen(false)}>
                 <Button variant="outline" className="w-full">
                   Become a Partner
                 </Button>
               </Link>
-              <Link href="/register" onClick={() => setIsOpen(false)}>
+              <Link href="/contact-us" onClick={() => setIsOpen(false)}>
                 <Button className="w-full">Contact Us</Button>
               </Link>
             </div>
@@ -184,12 +184,12 @@ const Header = () => {
               ))}
             </nav>
             <div className="hidden md:flex space-x-3">
-              <Link href="/login">
+              <Link href="/get-involved">
                 <Button variant="outline" className=" text-primary">
                   Become a partner
                 </Button>
               </Link>
-              <Link href="/onboarding">
+              <Link href="/contact-us">
                 <Button className="bg-primary text-white">Contact Us</Button>
               </Link>
             </div>
