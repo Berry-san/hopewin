@@ -115,28 +115,28 @@ const LandingPage = () => {
         </h3>
         <div className="grid grid-cols-4 grid-rows-9 gap-4 md:grid-cols-6 md:grid-rows-6 w-full max-w-6xl mx-auto h-full">
           {/* Element 1 */}
-          <div className="row-span-4 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-1.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-4 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-1.png)] bg-cover bg-no-repeat bg-center p-4 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
               Women <span className="text-[#23DB76]">Empowerment</span>
             </p>
           </div>
 
           {/* Element 2 */}
-          <div className="row-span-2 col-span-2 md:row-span-3 md:col-span-2 bg-[url(/images/grid-2.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-2 col-span-2 md:row-span-3 md:col-span-2 bg-[url(/images/grid-2.png)] bg-cover bg-no-repeat bg-center p-4 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
               Youth <span className="text-primary">Mentorship</span>
             </p>
           </div>
 
           {/* Element 3 */}
-          <div className="row-span-3 col-span-2 md:row-span-2 md:col-span-2 bg-[url(/images/grid-2.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-3 col-span-2 md:row-span-2 md:col-span-2 bg-[url(/images/grid-3.png)] bg-cover bg-no-repeat bg-center p-4 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold mt-10">
               Environmental <span className="text-[#23DB76]">Protection</span>
             </p>
           </div>
 
           {/* Element 4 */}
-          <div className="row-span-2 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-6.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-2 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-6.png)] bg-cover bg-no-repeat bg-center p-4 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold mt-10">
               Child{' '}
               <span className="text-primary">
@@ -146,14 +146,14 @@ const LandingPage = () => {
           </div>
 
           {/* Element 5 */}
-          <div className="row-span-4 col-span-2 md:row-span-3 md:col-span-2 bg-[url(/images/grid-5.png)] bg-cover bg-no-repeat bg-center p-4 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-4 col-span-2 md:row-span-3 md:col-span-2 bg-[url(/images/grid-5.png)] bg-cover bg-no-repeat bg-center p-4 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-sm md:text-2xl lg:text-3xl font-bold max-w-[15rem] text-center">
               <span className="text-[#23DB76]">Back to School</span> Progam
             </p>
           </div>
 
           {/* Element 6 */}
-          <div className="row-span-3 col-span-2 md:row-span-2 md:col-span-2 bg-[url(/images/grid-4.png)] bg-cover bg-no-repeat bg-center px-4 py-6 rounded-3xl shadow flex items-end justify-center">
+          <div className="row-span-3 col-span-2 md:row-span-2 md:col-span-2 bg-[url(/images/grid-4.png)] bg-cover bg-no-repeat bg-center px-4 py-6 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
               <span className="text-primary">Research</span> & Advocacy
             </p>
