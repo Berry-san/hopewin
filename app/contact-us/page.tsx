@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const ContactUs = () => {
   return (
-    <div className="max-w-6xl mx-auto py-10 px-10">
+    <div className="max-w-7xl mx-auto py-10 px-10">
       <h2 className="text-primary text-5xl font-extrabold">Contact Us</h2>
       <h3 className="mt-8 text-primary text-2xl font-bold">
         We&apos;d Love to Hear from You

@@ -11,7 +11,7 @@ const GetInvolved = () => {
   const [tab, setTab] = useState('volunteer')
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-10 overflow-x-hidden">
+    <div className="max-w-7xl mx-auto py-10 px-10 overflow-x-hidden">
       <div
         className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center"
         // style={{ clipPath: 'polygon(0% 0%, 100% 0%, 95% 90%, 2.5% 100%)' }}

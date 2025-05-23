@@ -16,7 +16,7 @@ import {
 
 const eventItems = [
   {
-    title: 'Annual Women&atops;s Empowerment Conference',
+    title: "Annual Women's Empowerment Conference",
     background: '/images/conference.png',
   },
   {
@@ -35,8 +35,8 @@ const LandingPage = () => {
       <section id="hero" className="relative bg-white w-full ">
         <div className="flex items-center justify-center flex-col my-20 text-center space-y-6 px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-7xl font-extrabold max-w-4xl">
-            Empowering <span className="text-primary">Women</span>, Uplifting{' '}
-            <span className="text-secondary">Communities</span>
+            Empowering <span className="text-primary">Women</span>,{' '}
+            <span className="text-secondary">Uplifting</span> Communities
           </h2>
           <p className="text-xl max-w-3xl">
             Hope for Peace Women Initiative is dedicated to promoting the rights
@@ -58,7 +58,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="bg-gradient-to-b from-[#FFE5F7] to-[#E4FBCC] py-10 px-10">
-          <div className="max-w-6xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
+          <div className="max-w-7xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
             <div className="flex flex-col space-y-2 text-center">
               <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                 1000+
@@ -80,9 +80,9 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className="max-w-6xl mx-auto py-20 px-10">
-        <div className="grid grid-cols-2">
-          <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center">
+      <section className="py-20 px-10 bg-gradient-to-r from-[#FCCEEE] to-[#E4FBCC]">
+        <div className="grid grid-cols-2 max-w-7xl mx-auto">
+          <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center order-2 lg:order-1">
             <Image
               src={'/images/about-section-image.png'}
               width={450}
@@ -90,7 +90,7 @@ const LandingPage = () => {
               alt={'About Image'}
             />
           </div>
-          <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10">
+          <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10 order-1 lg:order-2">
             <h3 className="text-5xl font-extrabold">
               <span className="text-secondary">About</span> Hopewin
             </h3>
@@ -113,7 +113,7 @@ const LandingPage = () => {
         <h3 className="text-5xl font-extrabold">
           Our <span className="text-primary">Programs</span>
         </h3>
-        <div className="grid grid-cols-4 grid-rows-9 gap-4 md:grid-cols-6 md:grid-rows-6 w-full max-w-6xl mx-auto h-full">
+        <div className="grid grid-cols-4 grid-rows-9 gap-4 md:grid-cols-6 md:grid-rows-6 w-full max-w-7xl mx-auto h-full">
           {/* Element 1 */}
           <div className="row-span-4 col-span-2 md:row-span-4 md:col-span-2 bg-[url(/images/grid-1.png)] bg-cover bg-no-repeat bg-center p-4 rounded-[1rem] md:rounded-[3rem] shadow flex items-end justify-center">
             <p className="text-white text-base text-center md:text-2xl lg:text-3xl font-bold">
@@ -164,10 +164,10 @@ const LandingPage = () => {
           size={'xl'}
           className="bg-transparent lg:w-1/3"
         >
-          See More
+          See all
         </Button>
       </section>
-      <section className="max-w-6xl mx-auto py-20 px-10 space-y-10">
+      <section className="max-w-7xl mx-auto py-20 px-10 space-y-10">
         <h3 className="text-center text-5xl font-extrabold">
           <span className="text-primary">Get</span> Involved
         </h3>
@@ -217,7 +217,7 @@ const LandingPage = () => {
             </Button>
           </div>
         </div> */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-12">
           {[
             {
               title: 'Volunteer with us',
@@ -252,8 +252,8 @@ const LandingPage = () => {
 
               {/* Button always at bottom */}
               <div className="pt-4 mt-6">
-                <Button variant={'outline'} size={'xl'}>
-                  See More
+                <Button variant={'outline'} size={'xl'} className="w-full">
+                  Get Started
                 </Button>
               </div>
             </div>
@@ -261,50 +261,58 @@ const LandingPage = () => {
         </div>
       </section>
       <section className="bg-primaryBackground py-20 px-10">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <h3 className="text-center text-5xl font-extrabold">
-            News & <span className="text-primary">Updates</span>
-          </h3>
-          <div className="flex items-center md:justify-between py-10 md:border-b-2 border-dashed border-primary">
-            <h4 className="text-3xl text-center text-secondaryBackground md:text-left w-full font-bold max-w-[15rem] mx-auto md:mx-0">
-              Our Upcoming <span className="text-primary">Events</span>
-            </h4>
-            <div className="max-w-md hidden md:block">
-              <p className="mb-4">
-                Stay updated on our latest events, community outreach, and
-                stories of impact. We share updates on ongoing projects, and
-                opinion pieces on trending social issues affecting women and
-                children.
-              </p>
-              <Button>See More</Button>
+        <div className="max-w-7xl mx-auto">
+          <div className="lg:px-20">
+            <h3 className="text-center text-5xl font-extrabold">
+              News & <span className="text-primary">Updates</span>
+            </h3>
+            <div className="flex items-center md:justify-between py-10">
+              <h4 className="text-3xl text-center text-secondaryBackground md:text-left w-full font-bold max-w-[15rem] mx-auto md:mx-0">
+                Our Upcoming <span className="text-primary">Events</span>
+              </h4>
+              <div className="max-w-md hidden md:block">
+                <p className="mb-4">
+                  Stay updated on our latest events, community outreach, and
+                  stories of impact. We share updates on ongoing projects, and
+                  opinion pieces on trending social issues affecting women and
+                  children.
+                </p>
+                <Button>See Blog</Button>
+              </div>
             </div>
           </div>
-          {/* <div className="grid grid-cols-3 gap-6">
-            <div className="bg-[url('/images/newsBackground.png')] bg-cover bg-no-repeat bg-center w-full p-2 rounded-md col-span-3 lg:col-span-1">
-              <div className="w-full h-56 bg-amber-300 rounded-lg"></div>
-              <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4">
-                Annual Women&apos;s Empowerment Conference
-              </p>
-            </div>
-            <div className="bg-[url('/images/newsBackground.png')] bg-cover bg-no-repeat bg-center w-full p-2 rounded-md col-span-3 lg:col-span-1">
-              <div className="w-full h-56 bg-amber-300 rounded-lg"></div>
-              <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4">
-                Annual Women&apos;s Empowerment Conference
-              </p>
-            </div>
-            <div className="bg-[url('/images/newsBackground.png')] bg-cover bg-no-repeat bg-center w-full p-2 rounded-md col-span-3 lg:col-span-1">
-              <div className="w-full h-56 bg-amber-300 rounded-lg"></div>
-              <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4">
-                Annual Women&apos;s Empowerment Conference
-              </p>
-            </div>
-          </div> */}
-          <Carousel className="w-full">
+
+          <div className="hidden lg:flex">
+            <svg
+              className="w-full h-20 -m-6"
+              viewBox="0 0 100 10"
+              preserveAspectRatio="none"
+            >
+              {/* Start Dot */}
+              <circle cx="0.5" cy="2" r="0.35" fill="#F371BD" />
+
+              {/* Dashed Line */}
+              <line
+                x1="1"
+                y1="2"
+                x2="98"
+                y2="2"
+                stroke="#F371BD"
+                strokeWidth="0.1"
+                strokeDasharray="1 0.5"
+              />
+
+              {/* End Dot */}
+              <circle cx="99" cy="2" r="0.35" fill="#F371BD" />
+            </svg>
+          </div>
+
+          <Carousel className="w-full lg:px-20">
             <CarouselContent className="-ml-2">
               {eventItems.map((event, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-2 md:basis-1/2 lg:basis-1/3"
+                  className="pl-4 md:basis-1/2 lg:basis-1/3"
                 >
                   <div className="bg-cover bg-[url('/images/newsBackground.png')] bg-no-repeat bg-center w-full p-2 rounded-md">
                     <Image
@@ -336,8 +344,8 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 px-10">
-        <div className="max-w-6xl mx-auto space-y-10">
+      <section className="py-20 px-10 bg-gradient-to-r from-[#FCCEEE] to-[#E4FBCC]">
+        <div className="max-w-7xl mx-auto space-y-10">
           <div className="text-center">
             <h3 className="text-5xl font-extrabold ">
               <span className="text-primary">Our Success</span> Stories
@@ -392,9 +400,9 @@ const LandingPage = () => {
         </div>
       </section>
       <section className="bg-secondaryBackground py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-6 text-white flex flex-col items-center justify-center text-center">
-          <h3 className="text-4xl font-bold">Reach Out to Us</h3>
-          <p className="text-3xl max-w-4xl">
+        <div className="max-w-7xl mx-auto space-y-6 text-white flex flex-col items-center justify-center text-center">
+          <h3 className="text-2xl md:text-4xl font-bold">Reach Out to Us</h3>
+          <p className="text-xl md:text-3xl max-w-4xl">
             For any information, enquiries, sponsorship or partnerships, Kindly
             reach out to us today.
           </p>

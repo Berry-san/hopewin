@@ -53,8 +53,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-transparent w-full">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-10 py-4">
+      <header className="fixed bg-white top-0 z-40 w-full">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10 py-4 w-full">
           {/* Logo */}
           <Link className="flex-shrink-0" href={'/'}>
             <Image
@@ -114,7 +114,7 @@ const Header = () => {
                   src={'/images/logo.png'}
                   width={40}
                   height={40}
-                  alt="Ethica"
+                  alt="Hopewin"
                   style={{ width: 'auto' }}
                 />
               </Link>
@@ -158,9 +158,9 @@ const Header = () => {
       </header>
 
       {/* Sticky Header After Scrolling */}
-      {showStickyHeader && (
+      {/* {showStickyHeader && (
         <div className="fixed top-0 left-0 w-full mt-2 hidden lg:block z-40 transition-all duration-300 px-4 md:px-10">
-          <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3 rounded-full bg-white">
+          <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 rounded-full bg-white">
             <Link href={'/'}>
               <Image
                 src={'/images/logo.png'}
@@ -195,7 +195,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </>
   )
 }

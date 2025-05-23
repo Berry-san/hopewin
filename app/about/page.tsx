@@ -5,7 +5,7 @@ import Image from 'next/image'
 const AboutUs = () => {
   return (
     <div className="pt-10">
-      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
           <div className="col-span-3 lg:col-span-2 text-white">
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-extrabold">
@@ -28,7 +28,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="bg-primaryBackground rounded-[2rem] lg:rounded-[3.5rem] text-white p-6 md:p-12 lg:p-20 mb-12">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-3 md:col-span-2 flex flex-col space-y-2 text-center">
@@ -46,7 +46,7 @@ const AboutUs = () => {
                   Our Core Values
                 </h3>
               </div>
-              <ul className="list-disc list-inside text-left text-secondaryBackground">
+              <ul className="list-disc list-inside text-left text-xl text-secondaryBackground">
                 <li>Integrity</li>
                 <li>Empowerment</li>
                 <li>Inclusion</li>
@@ -58,20 +58,9 @@ const AboutUs = () => {
           <div className="grid grid-cols-2 mt-10 gap-4">
             <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-[1.5rem]">
               <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl bg-primaryBackground">
-                Our Vision
-              </h3>
-              <p className="text-white">
-                To create a just, inclusive, and empowered society where women,
-                children, and marginalized groups thrive socially, economically,
-                and intellectually, leading to sustainable development and equal
-                opportunities for all.
-              </p>
-            </div>
-            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-[1.5rem]">
-              <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl bg-primaryBackground">
                 Our Mission
               </h3>
-              <p className="text-white">
+              <p className="text-white text-2xl">
                 Our mission is to safeguard the rights and well-being of women
                 and children by providing social, educational, and economic
                 empowerment programs. We aim to foster moral values, raise
@@ -81,9 +70,20 @@ const AboutUs = () => {
                 potential.
               </p>
             </div>
+            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 p-4 bg-secondaryBackground rounded-[1.5rem]">
+              <h3 className="text-3xl font-bold text-secondaryBackground py-2 w-fit px-1 rounded-xl bg-primaryBackground">
+                Our Vision
+              </h3>
+              <p className="text-white text-2xl">
+                To create a just, inclusive, and empowered society where women,
+                children, and marginalized groups thrive socially, economically,
+                and intellectually, leading to sustainable development and equal
+                opportunities for all.
+              </p>
+            </div>
           </div>
           <div className="bg-[#FFC7EA] text-secondaryBackground mt-10 rounded-[2rem] px-10 py-10">
-            <div className="max-w-6xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
+            <div className="max-w-7xl mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between">
               <div className="flex flex-col space-y-2 text-center">
                 <p className="text-3xl md:text-5xl lg:text-8xl font-extrabold">
                   1000+
@@ -107,7 +107,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="bg-secondaryBackground py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-6 text-white flex flex-col items-center justify-center text-center">
+        <div className="max-w-7xl mx-auto space-y-6 text-white flex flex-col items-center justify-center text-center">
           <h3 className="text-4xl font-bold">Reach Out to Us</h3>
           <p className="text-3xl max-w-4xl">
             For any information, enquiries, sponsorship or partnerships, Kindly
