@@ -84,7 +84,7 @@ const Header = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/get-involved/vounteer">
+            <Link href="/get-involved/volunteer">
               <Button variant="outline" className="">
                 Become a Partner
               </Button>
@@ -146,7 +146,7 @@ const Header = () => {
             </nav>
             <div className="flex flex-col space-y-3">
               <Link
-                href="/get-involved/vounteer"
+                href="/get-involved/volunteer"
                 onClick={() => setIsOpen(false)}
               >
                 <Button variant="outline" size={'xl'} className="w-full">
