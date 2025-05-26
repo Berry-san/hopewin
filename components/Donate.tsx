@@ -18,7 +18,7 @@ const Donate = () => {
         </h2>
         <div className="text-base font-medium">
           <p>Your support enables us to: </p>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-outside pl-6 space-y-3">
             <li>
               <span className="font-bold">Provide Educational Resources:</span>{' '}
               Supply school bags, books, and stationery to children in need

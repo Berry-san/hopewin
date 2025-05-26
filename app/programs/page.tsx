@@ -41,14 +41,14 @@ const programs = [
     id: 7,
     title: 'Research and Advocacy',
     description:
-      'Our NGO conducts research on social issues affecting women and children, gathering data to inform policies and advocacy campaigns. We also campaign for awareness on critical issues such as women&atops;s rights, gender equality, and mental health.',
+      "Our NGO conducts research on social issues affecting women and children, gathering data to inform policies and advocacy campaigns. We also campaign for awareness on critical issues such as women's rights, gender equality, and mental health.",
   },
 ]
 
 const Programs = () => {
   return (
     <div className="max-w-7xl mx-auto py-10 px-8">
-      <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
+      {/* <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
         <div className="col-span-3 lg:col-span-2 text-white">
           <h2 className="text-3xl md:text-4xl lg:text-6xl font-extrabold">
             Our Programs
@@ -66,6 +66,26 @@ const Programs = () => {
             alt={'Programs Image'}
           />
         </div>
+      </div> */}
+      <div className="bg-[url('/images/mobile-bg.png')] md:bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-contain bg-center p-4 md:px-10 lg:px-20 grid grid-cols-3 md:gap-10 mb-6 md:mb-10 rounded-2xl place-items-center place-content-center">
+        <div className="col-span-3 md:col-span-2 text-white">
+          <h2 className="text-lg md:text-4xl lg:text-6xl font-extrabold mt-4">
+            Our Programs
+          </h2>
+          <p className="text-base md:text-xl lg:text-3xl mt-4">
+            We organised varieties of programs, centred around promoting the
+            rights and well-being of women and children through outreaches.
+          </p>
+        </div>
+        <div className="col-span-3 md:col-span-1">
+          <Image
+            src={'/images/dart.png'}
+            width={150}
+            height={150}
+            alt={'Programs Image'}
+            className="w-44 h-44 sm:w-36 sm:h-36 md:h-64 md:w-56 lg:w-96 lg:h-96 object-fit"
+          />
+        </div>
       </div>
       <div className="max-w-7xl mx-auto my-10">
         <h3 className="font-bold text-3xl md:text-5xl text-center mb-10">
@@ -80,23 +100,16 @@ const Programs = () => {
               }`}
             >
               <div className="flex flex-col order-2 lg:order-1">
-                <div className="flex mb-4 items-center font-semibold text-lg">
-                  <span className="text-xl font-bold mr-2 py-2 px-4 bg-[#FFC7EA] rounded-full">
+                <div className="flex mb-4 items-center font-semibold text-2xl">
+                  <span className="text-2xl font-bold mr-6 py-2 px-4.5 bg-[#FFC7EA] rounded-full">
                     {program.id}
                   </span>
                   {program.title}
                 </div>
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-700 font-semibold leading-relaxed">
                   {program.description}
                 </p>
               </div>
-              <Image
-                src={'/images/medicine.png'}
-                width={150}
-                height={150}
-                alt={'Program Image'}
-                className="order-1 lg:order-2"
-              />
             </div>
           ))}
         </div>

@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="pt-10">
       <section className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
+        {/* <div className="bg-secondaryBackground p-4 md:p-10  lg:p-20 grid grid-cols-3 gap-10 mb-10 rounded-2xl place-items-center place-content-center">
           <div className="col-span-3 lg:col-span-2 text-white">
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-extrabold">
               About Us{' '}
@@ -24,6 +24,28 @@ const AboutUs = () => {
               width={500}
               height={500}
               alt={'Programs Image'}
+            />
+          </div>
+        </div> */}
+        <div className="bg-[url('/images/mobile-bg.png')] md:bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-contain bg-center p-4 md:px-10 lg:px-20 grid grid-cols-3 md:gap-10 mb-6 md:mb-10 rounded-2xl place-items-center place-content-center">
+          <div className="col-span-3 md:col-span-2 text-white">
+            <h2 className="text-lg md:text-4xl lg:text-6xl font-extrabold mt-4">
+              About Us{' '}
+            </h2>
+            <p className="text-base md:text-xl lg:text-3xl mt-4">
+              Hope for Peace Women Initiative has been a beacon of hope in
+              Nigeria for over two years. We believe that by uplifting women and
+              safeguarding children's rights, we contribute to a more equitable
+              and inclusive society.
+            </p>
+          </div>
+          <div className="col-span-3 md:col-span-1">
+            <Image
+              src={'/images/gear.png'}
+              width={150}
+              height={150}
+              alt={'Programs Image'}
+              className="w-44 h-44 sm:w-36 sm:h-36 md:h-64 md:w-56 lg:w-96 lg:h-96 object-fit"
             />
           </div>
         </div>

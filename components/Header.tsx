@@ -17,7 +17,7 @@ const Header = () => {
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Our Programs', path: '/programs' },
-    { label: 'Get Involved', path: '/get-involved' },
+    { label: 'Get Involved', path: '/get-involved/volunteer' },
   ]
 
   useEffect(() => {
@@ -47,8 +47,9 @@ const Header = () => {
     }
   }, [isOpen])
 
-  const handleLogin = () => {
-    router.push('/login')
+  const isActive = (itemPath: string) => {
+    if (itemPath === '/') return pathname === '/' // exact match for home
+    return pathname.startsWith(itemPath) // match subpaths for others
   }
 
   return (
@@ -73,7 +74,7 @@ const Header = () => {
                 key={item.label}
                 href={item.path}
                 className={`px-4 py-2 rounded-full transition ${
-                  pathname === item.path ? 'text-primary' : 'text-black'
+                  isActive(item.path) ? 'text-primary' : 'text-black'
                 }`}
               >
                 {item.label}
@@ -83,7 +84,7 @@ const Header = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/get-involved">
+            <Link href="/get-involved/vounteer">
               <Button variant="outline" className="">
                 Become a Partner
               </Button>
@@ -136,7 +137,7 @@ const Header = () => {
                   href={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-2 rounded-md transition ${
-                    pathname === item.path && 'text-primary'
+                    isActive(item.path) && 'text-primary'
                   }`}
                 >
                   {item.label}
@@ -144,8 +145,11 @@ const Header = () => {
               ))}
             </nav>
             <div className="flex flex-col space-y-3">
-              <Link href="/get-involved" onClick={() => setIsOpen(false)}>
-                <Button variant="outline" className="w-full">
+              <Link
+                href="/get-involved/vounteer"
+                onClick={() => setIsOpen(false)}
+              >
+                <Button variant="outline" size={'xl'} className="w-full">
                   Become a Partner
                 </Button>
               </Link>

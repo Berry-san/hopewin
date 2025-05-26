@@ -6,8 +6,19 @@ import { FaXTwitter } from 'react-icons/fa6'
 import { SlSocialLinkedin } from 'react-icons/sl'
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
-    <div className="bg-primaryBackground">
+    <div className="bg-primaryBackground relative">
+      <div className="absolute bottom-0 right-0">
+        <Image
+          src={'/images/footerImage.png'}
+          width={150}
+          height={150}
+          alt={'Programs Image'}
+          className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 object-fit"
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto px-10 py-20 flex flex-col lg:flex-row justify-between">
         <div className="mr-20 mb-6 flex flex-col space-y-4">
           <Image
@@ -51,13 +62,13 @@ const Footer = () => {
             <h4 className="font-bold text-base">Get Involved</h4>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href={'/'}>Donate</Link>
+                <Link href={'/get-involved/donate'}>Donate</Link>
               </li>
               <li>
-                <Link href={'/about-us'}>Become a partner</Link>
+                <Link href={'/get-involved/partner'}>Become a partner</Link>
               </li>
               <li>
-                <Link href={'/contact-us'}>Volunteer with us</Link>
+                <Link href={'/get-involved/volunteer'}>Volunteer with us</Link>
               </li>
             </ul>
           </div>
@@ -103,7 +114,7 @@ const Footer = () => {
         </Link>
       </div>
       <p className="text-center text-base my-6">
-        &copy; 2025 Hopewin. All rights reserved.
+        &copy; {year} Hopewin. All rights reserved.
       </p>
     </div>
   )

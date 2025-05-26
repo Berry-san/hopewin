@@ -70,7 +70,7 @@ const ContactUs = () => {
       </div>
       <div className="mt-10 bg-secondaryBackground p-10 lg:p-16 rounded-md grid grid-cols-2 gap-6">
         <div className="col-span-2 lg:col-span-1">
-          <h3 className="text-primary text-2xl font-bold text-center lg:text-left">
+          <h3 className="text-[#F385C4] text-2xl font-bold text-center lg:text-left">
             ADDRESS
           </h3>
           <p className="text-3xl lg:text-6xl mt-4 font-bold lg:font-extrabold text-white text-center lg:text-left">

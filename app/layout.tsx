@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={`font-satoshi antialiased`}>
         <div className="w-full flex flex-col flex-grow">
           <Header />
-          <div className="flex-grow flex flex-col">{children}</div>
+          <div className="flex-grow flex flex-col mt-16 lg:mt-16">
+            {children}
+          </div>
           <Footer />
         </div>
       </body>

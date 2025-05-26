@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Header from './Header'
 import { Button } from './ui/button'
@@ -13,6 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import { useRouter } from 'next/navigation'
 
 const eventItems = [
   {
@@ -25,11 +28,12 @@ const eventItems = [
   },
   {
     title: 'Back to School Program',
-    background: '/images/conference.png',
+    background: '/images/school.png',
   },
 ]
 
 const LandingPage = () => {
+  const router = useRouter()
   return (
     <>
       <section id="hero" className="relative bg-white w-full ">
@@ -45,12 +49,12 @@ const LandingPage = () => {
             child can thrive.
           </p>
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-            <Link href="/login">
+            <Link href="/get-ivolved/donate">
               <Button size={'xl'} className="">
                 Donate to our cause
               </Button>
             </Link>
-            <Link href="/onboarding">
+            <Link href="/get-involved/partner">
               <Button size={'xl'} variant="outline">
                 Get Involved
               </Button>
@@ -102,14 +106,14 @@ const LandingPage = () => {
               equitable and inclusive society
             </p>
             <div className="">
-              <Button variant={'outline'} size={'xl'}>
+              <Button variant={'outline'} size={'xl'} className="w-1/3">
                 See More
               </Button>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-20 px-10 space-y-10 bg-primaryBackground min-h-screen flex flex-col items-center justify-center">
+      <section className="py-10 px-10 space-y-10 bg-primaryBackground min-h-screen flex flex-col items-center justify-center">
         <h3 className="text-5xl font-extrabold">
           Our <span className="text-primary">Programs</span>
         </h3>
@@ -222,18 +226,21 @@ const LandingPage = () => {
             {
               title: 'Volunteer with us',
               icon: <Donate className="w-12 h-12" />,
+              path: '/get-involved/volunteer',
               description:
                 "Make a difference by volunteering in one of our programs. Whether you're interested in mentoring youth, helping with women's empowerment initiatives, or any project, we have a place for you.",
             },
             {
               title: 'Become a partner',
               icon: <Handshake className="w-12 h-12" />,
+              path: '/get-involved/partner',
               description:
                 'We welcome partnerships with organizations, businesses, and individuals who share our vision. By working together, we can extend our impact and reach more communities.',
             },
             {
               title: 'Donate',
               icon: <GiveMoney className="w-12 h-12" />,
+              path: '/get-involved/donate',
               description:
                 'Your donations go directly to funding our programs, from providing education to vulnerable children to supporting women in their journey toward independence. Every contribution makes a difference.',
             },
@@ -252,7 +259,12 @@ const LandingPage = () => {
 
               {/* Button always at bottom */}
               <div className="pt-4 mt-6">
-                <Button variant={'outline'} size={'xl'} className="w-full">
+                <Button
+                  variant={'outline'}
+                  size={'xl'}
+                  className="w-full cursor-pointer"
+                  onClick={() => router.push(item.path)}
+                >
                   Get Started
                 </Button>
               </div>
@@ -267,8 +279,16 @@ const LandingPage = () => {
               News & <span className="text-primary">Updates</span>
             </h3>
             <div className="flex items-center md:justify-between py-10">
-              <h4 className="text-3xl text-center text-secondaryBackground md:text-left w-full font-bold max-w-[15rem] mx-auto md:mx-0">
+              {/* <h4 className="text-3xl text-center text-secondaryBackground md:text-left w-full font-bold max-w-[15rem] mx-auto md:mx-0">
                 Our Upcoming <span className="text-primary">Events</span>
+              </h4> */}
+              <h4
+                className="text-3xl text-center md:text-left w-full font-bold max-w-[15rem] mx-auto md:mx-0
+             bg-gradient-to-b from-[#000000] to-[#EA188E] bg-clip-text text-transparent leading-tight"
+              >
+                Our Upcoming
+                <br />
+                Events
               </h4>
               <div className="max-w-md hidden md:block">
                 <p className="mb-4">
@@ -320,9 +340,9 @@ const LandingPage = () => {
                       width={300}
                       height={300}
                       alt={'Conference Image'}
-                      className="w-full aspect-[4/3] bg-amber-300 rounded-lg"
+                      className="w-full aspect-[4/3] rounded-lg"
                     />
-                    <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-4 min-h-[7.5rem] md:min-h-[5.5rem]">
+                    <p className="text-center text-white bg-secondaryBackground rounded-md text-2xl font-semibold p-2 mt-2 min-h-[7.5rem] md:min-h-[5.5rem]">
                       {event.title}
                     </p>
                   </div>
@@ -368,7 +388,7 @@ const LandingPage = () => {
               </div>
               <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center ">
                 <Image
-                  src={'/images/about_image.png'}
+                  src={'/images/sarah.png'}
                   width={450}
                   height={450}
                   alt={'About Image'}
@@ -389,7 +409,7 @@ const LandingPage = () => {
               </div>
               <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center order-2 md:order-1">
                 <Image
-                  src={'/images/about_image.png'}
+                  src={'/images/ameenah.png'}
                   width={450}
                   height={450}
                   alt={'About Image'}
