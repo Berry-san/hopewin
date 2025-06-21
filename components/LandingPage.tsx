@@ -84,34 +84,37 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 px-10 bg-gradient-to-r from-[#FCCEEE] to-[#E4FBCC]">
-        <div className="grid grid-cols-2 max-w-7xl mx-auto">
-          <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center order-2 lg:order-1">
-            <Image
-              src={'/images/about-section-image.png'}
-              width={450}
-              height={450}
-              alt={'About Image'}
-            />
-          </div>
-          <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10 order-1 lg:order-2">
-            <h3 className="text-5xl font-extrabold">
-              <span className="text-secondary">About</span> Hopewin
-            </h3>
-            <p className="text-xl font-medium">
-              Founded with a vision to empower women and protect children's
-              rights, Hope for Peace Women Initiative has been a beacon of hope
-              in Nigeria for over two years. We believe that by uplifting women
-              and safeguarding children&atops;s rights, we contribute to a more
-              equitable and inclusive society
-            </p>
-            <div className="">
-              <Button variant={'outline'} size={'xl'} className="w-1/3">
-                See More
-              </Button>
+      <section className="bg-white/10 backdrop-blur-2xl">
+        <div className="py-20 px-10 bg-gradient-to-r from-[#FCCEEE] to-[#E4FBCC] ">
+          <div className="grid grid-cols-2 max-w-7xl mx-auto ">
+            <div className="col-span-2 md:col-span-1 flex flex-col space-y-2 text-center order-2 lg:order-1">
+              <Image
+                src={'/images/about-section-image.png'}
+                width={450}
+                height={450}
+                alt={'About Image'}
+              />
+            </div>
+            <div className="col-span-2 md:col-span-1 flex flex-col text-center md:text-left space-y-8 py-10 order-1 lg:order-2">
+              <h3 className="text-5xl font-extrabold">
+                <span className="text-secondary">About</span> Hopewin
+              </h3>
+              <p className="text-xl font-medium">
+                Founded with a vision to empower women and protect children's
+                rights, Hope for Peace Women Initiative has been a beacon of
+                hope in Nigeria for over two years. We believe that by uplifting
+                women and safeguarding children&atops;s rights, we contribute to
+                a more equitable and inclusive society
+              </p>
+              <div className="">
+                <Button variant={'outline'} size={'xl'} className="w-1/3">
+                  See More
+                </Button>
+              </div>
             </div>
           </div>
         </div>
+        <div className="h-20 bg-white/20"></div>
       </section>
       <section className="py-10 px-10 space-y-10 bg-primaryBackground min-h-screen flex flex-col items-center justify-center">
         <h3 className="text-5xl font-extrabold">

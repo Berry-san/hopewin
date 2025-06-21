@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { Button } from './ui/button'
 import { Menu, X } from 'lucide-react'
+import path from 'path'
 
 const Header = () => {
   const pathname = usePathname()
@@ -49,8 +50,10 @@ const Header = () => {
 
   const isActive = (itemPath: string) => {
     if (itemPath === '/') return pathname === '/' // exact match for home
-    return pathname.startsWith(itemPath) // match subpaths for others
+    return pathname.startsWith(itemPath) // match nested paths
   }
+
+  console.log(isActive(pathname))
 
   return (
     <>
@@ -137,7 +140,7 @@ const Header = () => {
                   href={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-2 rounded-md transition ${
-                    isActive(item.path) && 'text-primary'
+                    isActive(item.path) ? 'text-primary' : 'text-black'
                   }`}
                 >
                   {item.label}
