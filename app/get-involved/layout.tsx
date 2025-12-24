@@ -1,41 +1,39 @@
-'use client'
+"use client";
 
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import path from 'path'
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 
 const tabs = [
   {
-    href: '/get-involved/volunteer',
-    label: 'Volunteer with Us',
-    value: 'volunteer',
+    href: "/get-involved/volunteer",
+    label: "Volunteer with Us",
+    value: "volunteer",
   },
-  { href: '/get-involved/partner', label: 'Partner with Us', value: 'partner' },
+  { href: "/get-involved/partner", label: "Partner with Us", value: "partner" },
   {
-    href: '/get-involved/donate',
-    label: 'Donate to our Cause',
-    value: 'donate',
+    href: "/get-involved/donate",
+    label: "Donate to our Cause",
+    value: "donate",
   },
-]
+];
 
 export default function GetInvolvedLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const router = useRouter()
-  const pathname = usePathname()
-  const current = pathname.split('/').pop()
+  const router = useRouter();
+  const pathname = usePathname();
+  const current = pathname.split("/").pop();
 
-  const [tab, setTab] = useState('volunteer')
+  const [tab, setTab] = useState("volunteer");
 
   return (
     <div className="max-w-7xl mx-auto p-6 md:p-10 overflow-x-hidden">
-      <div className="bg-[url('/images/mobile-bg.png')] md:bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-contain bg-center p-4 md:px-10 lg:px-20 grid grid-cols-3 md:gap-10 mb-6 md:mb-10 rounded-2xl place-items-center place-content-center">
+      <div className="bg-[#630439] md:bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-contain bg-center p-4 md:px-10 lg:px-20 grid grid-cols-3 md:gap-10 mb-6 md:mb-10 rounded-2xl place-items-center place-content-center">
         <div className="col-span-3 md:col-span-2 text-white">
           <h2 className="text-lg md:text-4xl lg:text-6xl font-extrabold mt-4">
             Get Involved
@@ -48,10 +46,10 @@ export default function GetInvolvedLayout({
         </div>
         <div className="col-span-3 md:col-span-1">
           <Image
-            src={'/images/globe.png'}
+            src={"/images/globe.png"}
             width={150}
             height={150}
-            alt={'Programs Image'}
+            alt={"Programs Image"}
             className="w-44 h-44 sm:w-36 sm:h-36 md:h-64 md:w-56 lg:w-96 lg:h-96 object-fit"
           />
         </div>
@@ -69,24 +67,24 @@ export default function GetInvolvedLayout({
         <div className="relative flex flex-col items-start gap-8 mb-10 md:hidden">
           {[
             {
-              value: 'volunteer',
-              label: 'Volunteer with Us',
-              path: '/get-involved/volunteer',
+              value: "volunteer",
+              label: "Volunteer with Us",
+              path: "/get-involved/volunteer",
             },
             {
-              value: 'partner',
-              label: 'Partner with Us',
-              path: '/get-involved/partner',
+              value: "partner",
+              label: "Partner with Us",
+              path: "/get-involved/partner",
             },
             {
-              value: 'donate',
-              label: 'Donate to our Cause',
-              path: '/get-involved/donate',
+              value: "donate",
+              label: "Donate to our Cause",
+              path: "/get-involved/donate",
             },
           ].map((item, index, arr) => {
-            const isSelected = tab === item.value
-            const lineColor = isSelected ? 'bg-primary' : 'bg-primary/50'
-            const dotColor = isSelected ? 'text-primary' : 'text-primary/50'
+            const isSelected = tab === item.value;
+            const lineColor = isSelected ? "bg-primary" : "bg-primary/50";
+            const dotColor = isSelected ? "text-primary" : "text-primary/50";
 
             return (
               <div key={item.value} className="relative">
@@ -105,26 +103,26 @@ export default function GetInvolvedLayout({
                     value={item.value}
                     checked={isSelected}
                     onChange={() => {
-                      setTab(item.value)
-                      router.push(item.path)
+                      setTab(item.value);
+                      router.push(item.path);
                     }}
                     className={`accent-primary h-5 border border-primary w-5 ${dotColor}`}
                   />
                   <span
                     className={`${
-                      isSelected ? 'text-primary' : 'text-primary/50'
+                      isSelected ? "text-primary" : "text-primary/50"
                     } text-sm font-medium`}
                   >
                     {item.label}
                   </span>
                 </label>
               </div>
-            )
+            );
           })}
         </div>
       </Tabs>
 
       <div className="mt-6">{children}</div>
     </div>
-  )
+  );
 }

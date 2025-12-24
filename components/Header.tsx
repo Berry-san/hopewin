@@ -1,73 +1,75 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
-import { Button } from './ui/button'
-import { Menu, X } from 'lucide-react'
-import path from 'path'
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 const Header = () => {
-  const pathname = usePathname()
-  const router = useRouter()
-  const [isOpen, setIsOpen] = useState(false)
-  const [showStickyHeader, setShowStickyHeader] = useState(false)
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const [showStickyHeader, setShowStickyHeader] = useState(false);
 
   const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Our Programs', path: '/programs' },
-    { label: 'Get Involved', path: '/get-involved/volunteer' },
-  ]
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Our Programs", path: "/programs" },
+    { label: "Get Involved", path: "/get-involved/volunteer" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const hero = document.getElementById('hero')
-      if (!hero) return
+      const hero = document.getElementById("hero");
+      if (!hero) return;
 
-      const heroRect = hero.getBoundingClientRect()
-      const heroHalfHeight = hero.offsetHeight / 2
+      const heroRect = hero.getBoundingClientRect();
+      const heroHalfHeight = hero.offsetHeight / 2;
 
-      setShowStickyHeader(heroRect.bottom < heroHalfHeight)
-    }
+      setShowStickyHeader(heroRect.bottom < heroHalfHeight);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ''
+      document.body.style.overflow = "";
     }
 
     return () => {
-      document.body.style.overflow = ''
-    }
-  }, [isOpen])
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const isActive = (itemPath: string) => {
-    if (itemPath === '/') return pathname === '/' // exact match for home
-    return pathname.startsWith(itemPath) // match nested paths
-  }
+    if (itemPath === "/") return pathname === "/"; // exact match for home
+    return pathname.startsWith(itemPath); // match nested paths
+  };
 
-  console.log(isActive(pathname))
+  console.log(isActive(pathname));
 
   return (
     <>
       <header className="fixed bg-white top-0 z-40 w-full">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10 py-4 w-full">
           {/* Logo */}
-          <Link className="flex-shrink-0" href={'/'}>
+          <Link className="flex-shrink-0 flex items-center" href={"/"}>
             <Image
-              src={'/images/logo.png'}
+              src={"/images/logo.png"}
               width={40}
               height={40}
               alt="Ethica"
-              style={{ width: 'auto' }}
+              style={{ width: "auto" }}
             />
+            <span className="ml-4 font-bold text-[#0F6E39] text-sm max-w-[8.5rem]">
+              HOPE FOR PEACE WOMEN INITIATIVE
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -77,7 +79,7 @@ const Header = () => {
                 key={item.label}
                 href={item.path}
                 className={`px-4 py-2 rounded-full transition ${
-                  isActive(item.path) ? 'text-primary' : 'text-black'
+                  isActive(item.path) ? "text-primary" : "text-black"
                 }`}
               >
                 {item.label}
@@ -113,13 +115,13 @@ const Header = () => {
           <div className="fixed inset-0 z-40 bg-white flex flex-col px-4 md:px-10 py-4 space-y-8">
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link className="flex-shrink-0" href={'/'}>
+              <Link className="flex-shrink-0" href={"/"}>
                 <Image
-                  src={'/images/logo.png'}
+                  src={"/images/logo.png"}
                   width={40}
                   height={40}
                   alt="Hopewin"
-                  style={{ width: 'auto' }}
+                  style={{ width: "auto" }}
                 />
               </Link>
 
@@ -140,7 +142,7 @@ const Header = () => {
                   href={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-2 rounded-md transition ${
-                    isActive(item.path) ? 'text-primary' : 'text-black'
+                    isActive(item.path) ? "text-primary" : "text-black"
                   }`}
                 >
                   {item.label}
@@ -152,7 +154,7 @@ const Header = () => {
                 href="/get-involved/volunteer"
                 onClick={() => setIsOpen(false)}
               >
-                <Button variant="outline" size={'xl'} className="w-full">
+                <Button variant="outline" size={"xl"} className="w-full">
                   Become a Partner
                 </Button>
               </Link>
@@ -204,7 +206,7 @@ const Header = () => {
         </div>
       )} */}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
