@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import Image from 'next/image'
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -27,10 +27,10 @@ const AboutUs = () => {
             />
           </div>
         </div> */}
-        <div className="bg-[url('/images/mobile-bg.png')] md:bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-contain bg-center p-4 md:px-10 lg:px-20 grid grid-cols-3 md:gap-10 mb-6 md:mb-10 rounded-2xl place-items-center place-content-center">
+        <div className="bg-[#630439] md:bg-[url('/images/aboutUs-background.png')] bg-no-repeat bg-contain bg-center p-4 md:px-10 lg:px-20 grid grid-cols-3 md:gap-10 mb-6 md:mb-10 rounded-2xl place-items-center place-content-center">
           <div className="col-span-3 md:col-span-2 text-white">
             <h2 className="text-lg md:text-4xl lg:text-6xl font-extrabold mt-4">
-              About Us{' '}
+              About Us{" "}
             </h2>
             <p className="text-base md:text-xl lg:text-3xl mt-4">
               Hope for Peace Women Initiative has been a beacon of hope in
@@ -41,10 +41,10 @@ const AboutUs = () => {
           </div>
           <div className="col-span-3 md:col-span-1">
             <Image
-              src={'/images/gear.png'}
+              src={"/images/gear.png"}
               width={150}
               height={150}
-              alt={'Programs Image'}
+              alt={"Programs Image"}
               className="w-44 h-44 sm:w-36 sm:h-36 md:h-64 md:w-56 lg:w-96 lg:h-96 object-fit"
             />
           </div>
@@ -55,11 +55,11 @@ const AboutUs = () => {
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-3 md:col-span-2 flex flex-col space-y-2 text-center">
               <Image
-                src={'/images/about-image.png'}
+                src={"/images/about-image.png"}
                 width={500}
                 height={500}
                 className="w-full bg-contain h-full"
-                alt={'Programs Image'}
+                alt={"Programs Image"}
               />
             </div>
             <div className="col-span-3 md:col-span-1 flex flex-col space-y-2 p-4 bg-[#FFC7EA] rounded-[1.5rem]">
@@ -135,13 +135,13 @@ const AboutUs = () => {
             For any information, enquiries, sponsorship or partnerships, Kindly
             reach out to us today.
           </p>
-          <Link href={'/contact-us'}>
-            <Button size={'xl'}>Contact Us</Button>
+          <Link href={"/contact-us"}>
+            <Button size={"xl"}>Contact Us</Button>
           </Link>
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;
