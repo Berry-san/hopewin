@@ -30,10 +30,11 @@ const Footer = () => {
           <Link className="flex-shrink-0 flex items-center" href={"/"}>
             <Image
               src={"/images/logo.png"}
-              width={100}
-              height={100}
+              width={75}
+              height={75}
               alt={"Hopewin Logo"}
               style={{ width: "auto" }}
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-fit"
             />
             <span className="ml-4 font-bold text-[#0F6E39] text-lg max-w-56">
               HOPE FOR PEACE WOMEN INITIATIVE
