@@ -1,20 +1,20 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Hopewin',
-  description: 'Empowering Women,Uplifting Communities',
+  title: "Hopewin",
+  description: "Empowering Women,Uplifting Communities",
   icons: {
-    icon: '/images/logo.png',
+    icon: [{ url: "/logo.png", type: "image/png" }],
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -28,5 +28,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }
